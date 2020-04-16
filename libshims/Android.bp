@@ -1,6 +1,6 @@
 cc_library_shared {
     name: "rild_socket",
-    srcs: ["rild_socket.c"],
+    srcs: ["rild_socket.cpp"],
     proprietary: true,
 }
 

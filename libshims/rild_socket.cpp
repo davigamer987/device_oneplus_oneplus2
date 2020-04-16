@@ -15,5 +15,19 @@
  */
 
 #define MAX_SOCKET_NAME_LENGTH 6
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/un.h>
 
 char rild[MAX_SOCKET_NAME_LENGTH] = "rild";
+
+extern "C" int vsnprintf() {
+    return 0;
+}
+
+extern "C" int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen) {
+    if (addrlen && ((*addrlen < 0) || (*addrlen > sizeof(struct sockaddr_un)))) {
+        *addrlen = sizeof(struct sockaddr_un);
+    }
+    return accept4(sockfd, addr, addrlen, 0);
+}
