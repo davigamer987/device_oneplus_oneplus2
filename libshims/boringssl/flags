@@ -1,0 +1,6 @@
+e_des.c:  EVP_DES_KEY *dat = (EVP_DES_KEY *)ctx->cipher_data;
+e_des.c:  if (in_len < ctx->cipher->block_size) {
+e_des.c:  in_len -= ctx->cipher->block_size;
+e_des.c:  EVP_DES_KEY *dat = (EVP_DES_KEY *) ctx->cipher_data;
+e_des.c:  for (size_t i = 0; i <= in_len; i += ctx->cipher->block_size) {
+e_des.c:                    &dat->ks.ks, ctx->encrypt);

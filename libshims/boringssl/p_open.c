@@ -83,13 +83,13 @@ int EVP_OpenInit(EVP_CIPHER_CTX *ctx, const EVP_CIPHER *type,
 
 	if(!priv) return 1;
 
-	if (priv->type != EVP_PKEY_RSA)
+	if (EVP_PKEY_id(priv)!= EVP_PKEY_RSA)
 		{
 		EVPerr(EVP_F_EVP_OPENINIT,EVP_R_PUBLIC_KEY_NOT_RSA);
 		goto err;
                 }
 
-	size=RSA_size(priv->pkey.rsa);
+	size=RSA_size(EVP_PKEY_get0_RSA(priv));
 	key=(unsigned char *)OPENSSL_malloc(size+2);
 	if (key == NULL)
 		{
