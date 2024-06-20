@@ -203,5 +203,8 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
+# Only needed for signing
+BOARD_AVB_ENABLE := false
+
 # inherit from the proprietary version
 include vendor/oneplus/oneplus2/BoardConfigVendor.mk
