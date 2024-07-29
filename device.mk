@@ -285,7 +285,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_softomx_plugin.vendor
 
 # Partitions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
