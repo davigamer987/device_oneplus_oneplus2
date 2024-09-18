@@ -16,6 +16,16 @@
 
 $(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.ebpf.supported=false \
+    bpf.progs_loaded=1
+
+## This is a workaround for the Bluetooth sanitize shadow call stack (SCS)
+## crash reported here: https://issuetracker.google.com/issues/302408537.
+## For details of the root cause and the cts vts tests comparison between
+## the preloading and non-preloading builds, please check the above issue.
+PRODUCT_PROPERTY_OVERRIDES += ro.zygote.disable_gl_preload=1
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
