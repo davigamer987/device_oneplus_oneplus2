@@ -285,8 +285,8 @@ PRODUCT_COPY_FILES += \
 
 # Net
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4-service.msm8994 \
     android.hardware.radio.config@1.0-service
-
 
 # OMX
 PRODUCT_PACKAGES += \
