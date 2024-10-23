@@ -111,6 +111,7 @@ PRODUCT_COPY_FILES += \
 
 # Updater
 AB_OTA_UPDATER := false
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # Bluetooth
 PRODUCT_PACKAGES += \
