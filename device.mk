@@ -341,6 +341,11 @@ PRODUCT_PACKAGES += \
     init.tfa.sh \
     tinyplay
 
+# TimeKeep
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep
+
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.oneplus2
