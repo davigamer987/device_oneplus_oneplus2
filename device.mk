@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default
 
+# Wifi
+PRODUCT_PACKAGES += \
+    libcld80211
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
@@ -137,7 +141,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8994 \
     libshim_atomic \
-    sensors.hal.tof
+    sensors.hal.tof \
+    libstdc++ \
+    libstdc++_vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -385,7 +391,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcrypto-v33 \
     libutils-v33 \
-    libhidlbase-v32
+    libhidlbase-v32 \
+    libprotobuf-cpp-lite-v28 \
+    libprotobuf-cpp-full-v28
 
 # WiFi
 PRODUCT_PACKAGES += \

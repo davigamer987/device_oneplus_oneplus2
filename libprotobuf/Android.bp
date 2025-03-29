@@ -1,0 +1,35 @@
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-full-v28",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["vndk/arm/libprotobuf-cpp-full-v28.so"],
+        },
+        android_arm64: {
+            srcs: ["vndk/arm64/libprotobuf-cpp-full-v28.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite-v28",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["vndk/arm/libprotobuf-cpp-lite-v28.so"],
+        },
+        android_arm64: {
+            srcs: ["vndk/arm64/libprotobuf-cpp-lite-v28.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+}

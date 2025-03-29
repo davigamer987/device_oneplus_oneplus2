@@ -1,20 +1,20 @@
 # ACDB - OxygenOS 3.6.0
-etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
-etc/acdbdata/MTP/MTP_General_cal.acdb
-etc/acdbdata/MTP/MTP_Global_cal.acdb
-etc/acdbdata/MTP/MTP_Handset_cal.acdb
-etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-etc/acdbdata/MTP/MTP_Headset_cal.acdb
-etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+system/etc/acdbdata/MTP/MTP_General_cal.acdb
+system/etc/acdbdata/MTP/MTP_Global_cal.acdb
+system/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+system/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
+system/etc/acdbdata/MTP/MTP_Headset_cal.acdb
+system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 
 # ADSP - OxygenOS 3.6.0
-bin/adsprpcd:vendor/bin/adsprpcd
+system/bin/adsprpcd:vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 vendor/lib64/libadsprpc.so
 
 # Audio - OxygenOS 3.6.0
-etc/firmware/tfa98xx.cnt
+system/etc/firmware/tfa98xx.cnt
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so|7caecddacf8dc174cfd2d224238b2c88e2e36d9d
 vendor/lib/libacdbrtac.so
@@ -30,34 +30,34 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libhwdaphal.so
 
 # Audio amplifier calibration sound
-etc/silence_short.wav:vendor/etc/silence_short.wav
+# etc/silence_short.wav:vendor/etc/silence_short.wav
 
 # Bluetooth - OxygenOS 3.6.0
-bin/btnvtool:vendor/bin/btnvtool
-bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
+system/bin/btnvtool:vendor/bin/btnvtool
+system/bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter|65c276e8ed95b55d337534411add48806e034a84
-etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
-etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
-etc/firmware/nvm_tlv_2.1.bin:vendor/firmware/nvm_tlv_2.1.bin
-etc/firmware/nvm_tlv_3.0.bin:vendor/firmware/nvm_tlv_3.0.bin
-etc/firmware/nvm_tlv_3.2.bin:vendor/firmware/nvm_tlv_3.2.bin
-etc/firmware/rampatch_tlv.img:vendor/firmware/rampatch_tlv.img
-etc/firmware/rampatch_tlv_1.3.tlv:vendor/firmware/rampatch_tlv_1.3.tlv
-etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
-etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
-etc/firmware/rampatch_tlv_3.2.tlv:vendor/firmware/rampatch_tlv_3.2.tlv
+system/etc/firmware/nvm_tlv.bin:vendor/firmware/nvm_tlv.bin
+system/etc/firmware/nvm_tlv_1.3.bin:vendor/firmware/nvm_tlv_1.3.bin
+system/etc/firmware/nvm_tlv_2.1.bin:vendor/firmware/nvm_tlv_2.1.bin
+system/etc/firmware/nvm_tlv_3.0.bin:vendor/firmware/nvm_tlv_3.0.bin
+system/etc/firmware/nvm_tlv_3.2.bin:vendor/firmware/nvm_tlv_3.2.bin
+system/etc/firmware/rampatch_tlv.img:vendor/firmware/rampatch_tlv.img
+system/etc/firmware/rampatch_tlv_1.3.tlv:vendor/firmware/rampatch_tlv_1.3.tlv
+system/etc/firmware/rampatch_tlv_2.1.tlv:vendor/firmware/rampatch_tlv_2.1.tlv
+system/etc/firmware/rampatch_tlv_3.0.tlv:vendor/firmware/rampatch_tlv_3.0.tlv
+system/etc/firmware/rampatch_tlv_3.2.tlv:vendor/firmware/rampatch_tlv_3.2.tlv
 vendor/lib/libbtnv.so
-vendor/lib/hw/audio.a2dp.default.so:vendor/lib/hw/audio.a2dp.msm8994.so
+#vendor/lib/hw/audio.a2dp.default.so:vendor/lib/hw/audio.a2dp.msm8994.so|affa6a7df5d532d1204dd5192e6b85d820f0104a
 vendor/lib64/libbtnv.so
 
 # Camera - OxygenOS 3.6.0
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
-lib/libFNVfbEngineLib.so
-lib/libmm-qcamera.so
-lib/libmorpho_video_refiner.so
-lib/libopcamerahw_interface.so
-lib64/libopcamera.so
-lib64/libopcameralib.so
+system/bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
+system/lib/libFNVfbEngineLib.so
+system/lib/libmm-qcamera.so;DISABLE_CHECKELF
+system/lib/libmorpho_video_refiner.so
+system/lib/libopcamerahw_interface.so
+system/lib64/libopcamera.so
+system/lib64/libopcameralib.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
@@ -146,7 +146,7 @@ vendor/lib/libchromatix_ov5648_30fps_video.so
 vendor/lib/libchromatix_ov5648_common.so
 
 # Camera firmware - OxygenOS 3.6.0
-etc/firmware/cpp_firmware_v1_8_0.fw
+system/etc/firmware/cpp_firmware_v1_8_0.fw
 
 # Camera sensors - OxygenOS 3.6.0
 vendor/lib/libmmcamera_isp_abf44.so
@@ -197,7 +197,7 @@ vendor/lib/libmmcamera_ov5648.so
 vendor/lib/libmmcamera_ov5648_eeprom.so
 
 # DRM - OxygenOS 3.6.0
-bin/qseecomd:vendor/bin/qseecomd
+system/bin/qseecomd:vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
@@ -206,30 +206,30 @@ vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 
 # Fingerprint sensor - OxygenOS 3.6.0
-etc/firmware/fingerprints.b00
-etc/firmware/fingerprints.b01
-etc/firmware/fingerprints.b02
-etc/firmware/fingerprints.b03
-etc/firmware/fingerprints.mdt
-lib/hw/fingerprint.msm8994.so
-lib/lib_fpc_tac_shared.so
-lib64/hw/fingerprint.msm8994.so
-lib64/lib_fpc_tac_shared.so
+system/etc/firmware/fingerprints.b00
+system/etc/firmware/fingerprints.b01
+system/etc/firmware/fingerprints.b02
+system/etc/firmware/fingerprints.b03
+system/etc/firmware/fingerprints.mdt
+system/lib/hw/fingerprint.msm8994.so
+system/lib/lib_fpc_tac_shared.so
+system/lib64/hw/fingerprint.msm8994.so
+system/lib64/lib_fpc_tac_shared.so
 
 # Gatekeeper - OxygenOS 3.6.0
 vendor/lib/hw/gatekeeper.msm8994.so
 vendor/lib64/hw/gatekeeper.msm8994.so
 
 # GPS
--lib64/libloc_api_v02.so
--lib64/libloc_ds_api.so
+-system/lib64/libloc_api_v02.so
+-system/lib64/libloc_ds_api.so
 vendor/lib64/hw/flp.default.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libflp.so
 vendor/lib64/libgeofence.so
-vendor/lib64/libizat_core.so
+vendor/lib64/libizat_core.so;DISABLE_CHECKELF
 vendor/lib64/liblbs_core.so
-vendor/lib64/liblocationservice.so
+vendor/lib64/liblocationservice.so;DISABLE_CHECKELF
 vendor/lib64/liblowi_client.so
 vendor/lib64/libulp2.so
 
@@ -242,7 +242,7 @@ vendor/lib/egl/libq3dtools_adreno.so|32f28df5844ed9826af5a77d7519db6b5db93ceb
 vendor/lib/egl/libq3dtools_esx.so|a7e233d9d6c3d61fa9b762e5c4c1772a5223ba14
 vendor/lib/hw/vulkan.msm8994.so:vendor/lib/vulkan.msm8994.so|8bd98116b5a586839aad4c93468fc04f044d4ef4
 vendor/lib/libC2D2.so|668aaec9820480a9f1b04a6994be28bc4fef5677
-vendor/lib/libOpenCL.so
+vendor/lib/libOpenCL.so;DISABLE_CHECKELF
 vendor/lib/libadreno_utils.so|4fd27f46943412ddbb69c4e32059a3a765db8b9a
 vendor/lib/libc2d30-a4xx.so|e9e4975a5e16e1799cd1883bbb8905ce4b51aa7c
 vendor/lib/libgsl.so|b90e66e879dfee14997282358ca4cf9cd3cbee83
@@ -266,8 +266,8 @@ vendor/lib64/libllvm-qgl.so|192a30d29c1f0c5e2a6f38ca3df58118be85f346
 vendor/lib64/libscale.so|248355dab3b68ad2fa320b173580cdf9410bdc66
 
 # Graphics firmware - OxygenOS 3.6.0
-etc/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw
+system/etc/firmware/a420_pfp.fw
+system/etc/firmware/a420_pm4.fw
 
 # Keystore - OxygenOS 3.6.0
 vendor/lib64/hw/keystore.msm8994.so|567487839c061bc76f020ddb7b3e4abe5b2bd93b
@@ -290,25 +290,25 @@ vendor/lib64/libSHIMDivxDrm.so
 vendor/lib64/libmmosal.so
 
 # Media firmware - OxygenOS 3.6.0
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
+system/etc/firmware/venus.b00
+system/etc/firmware/venus.b01
+system/etc/firmware/venus.b02
+system/etc/firmware/venus.b03
+system/etc/firmware/venus.b04
+system/etc/firmware/venus.mbn
+system/etc/firmware/venus.mdt
 
 # Modem - OxygenOS 3.6.0
-etc/firmware/mbn_ota/mcfg_sw_ATT-VoLTE.mbn
-etc/firmware/mbn_ota/mcfg_sw_CMCC_CSFB_DSDS_Commercial_Volte.mbn
-etc/firmware/mbn_ota/mcfg_sw_CU_OpenMkt-Commercial.mbn
-etc/firmware/mbn_ota/mcfg_sw_OEM_Overseas-Commercial.mbn
-etc/firmware/mbn_ota/mcfg_sw_Reliance-Commercial.mbn
-etc/firmware/mbn_ota/mcfg_sw_TMO-Commercial.mbn
+system/etc/firmware/mbn_ota/mcfg_sw_ATT-VoLTE.mbn
+system/etc/firmware/mbn_ota/mcfg_sw_CMCC_CSFB_DSDS_Commercial_Volte.mbn
+system/etc/firmware/mbn_ota/mcfg_sw_CU_OpenMkt-Commercial.mbn
+system/etc/firmware/mbn_ota/mcfg_sw_OEM_Overseas-Commercial.mbn
+system/etc/firmware/mbn_ota/mcfg_sw_Reliance-Commercial.mbn
+system/etc/firmware/mbn_ota/mcfg_sw_TMO-Commercial.mbn
 
 # Perf - OxygenOS 3.6.0
-bin/energy-awareness:vendor/bin/energy-awareness
-bin/msm_irqbalance:vendor/bin/msm_irqbalance
+system/bin/energy-awareness:vendor/bin/energy-awareness
+system/bin/msm_irqbalance:vendor/bin/msm_irqbalance
 vendor/bin/perfd
 vendor/etc/perf-profile0.conf
 vendor/etc/perf-profile1.conf
@@ -320,12 +320,12 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib64/libqti-perfd-client.so
 
 # Peripheral manager - OxygenOS 3.6.0 + Cyanogen OS 13.1.5
-bin/pm-proxy:vendor/bin/pm-proxy
-bin/pm-service:vendor/bin/pm-service
+system/bin/pm-proxy:vendor/bin/pm-proxy
+system/bin/pm-service:vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so|a2d0d11de098d1b3d02218b087868b4fbc2ba466
 
 # Postprocessing - OxygenOS 3.6.0
-bin/mm-pp-daemon:vendor/bin/mm-pp-daemon|6dcf0e841f47b24d6a0e223bf597f5dc186939b4
+system/bin/mm-pp-daemon:vendor/bin/mm-pp-daemon|6dcf0e841f47b24d6a0e223bf597f5dc186939b4
 vendor/lib/libdisp-aba.so
 vendor/lib/libmm-abl-oem.so
 -vendor/lib/libmm-abl.so
@@ -339,18 +339,12 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-als.so
 vendor/lib64/libmm-qdcm.so
 
-# Protobuf v28 VNDK libs
-vendor/lib/libprotobuf-cpp-lite-v28.so
-vendor/lib/libprotobuf-cpp-full-v28.so
-vendor/lib64/libprotobuf-cpp-lite-v28.so
-vendor/lib64/libprotobuf-cpp-full-v28.so
-
 # QMI - OxygenOS 3.6.0
-bin/irsc_util:vendor/bin/irsc_util
-etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-etc/permissions/qti_permissions.xml
+system/bin/irsc_util:vendor/bin/irsc_util
+system/etc/permissions/qti_libpermissions.xml|f1c533558f2f8cae615fa56d2fa5db2d10e47911
+system/etc/permissions/qti_permissions.xml
 -vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsi_netctrl.so;DISABLE_CHECKELF
 -vendor/lib/libdsutils.so
 -vendor/lib/libidl.so
 -vendor/lib/libqcci_legacy.so
@@ -361,7 +355,7 @@ vendor/lib/libqdp.so
 vendor/lib/libqmi_client_helper.so
 -vendor/lib/libqmi_client_qmux.so
 -vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
+#vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 -vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
@@ -383,23 +377,23 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libsmemlog.so
 
 # Radio - OxygenOS 3.6.0 + OxygenOS 5.0 and OB30/OB21 + MIUI v6.11.24
--app/datastatusnotification/datastatusnotification.apk|deb8d063001a59b68c63c19bb437354d4396fe4b
--app/QtiTelephonyService/QtiTelephonyService.apk|880d5c85178c4b3dd809a64e25f6108437c136fc
-bin/netmgrd:vendor/bin/netmgrd|6ca8f2e16d3078848808787c9a81cfc78dc27c58
-bin/qmuxd:vendor/bin/qmuxd
-bin/rfs_access:vendor/bin/rfs_access
+-system/app/datastatusnotification/datastatusnotification.apk|deb8d063001a59b68c63c19bb437354d4396fe4b
+-system/app/QtiTelephonyService/QtiTelephonyService.apk|880d5c85178c4b3dd809a64e25f6108437c136fc
+system/bin/netmgrd:vendor/bin/netmgrd|6ca8f2e16d3078848808787c9a81cfc78dc27c58
+system/bin/qmuxd:vendor/bin/qmuxd
+system/bin/rfs_access:vendor/bin/rfs_access
 vendor/bin/rmt_storage|59105701d95dec01f9028f86211630b3c45505fb
-etc/data/dsi_config.xml
-etc/data/netmgr_config.xml
-etc/data/qmi_config.xml
-etc/permissions/qcnvitems.xml
-etc/permissions/qcrilhook.xml
-etc/permissions/telephonyservice.xml
-framework/qcnvitems.jar|1ddb327e1a0afa103024f123ac618e6b89f9044d
-framework/qcrilhook.jar|77cb99dce9917a8b80f1f89cd6feac344bff8909
-framework/QtiTelephonyServicelibrary.jar|7c1dd966c584e4f76cb9b7e14755d1f820bd3a90
-lib64/libparam.so
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|55eab7bdd59841e3622133eb736b536222231e82
+system/etc/data/dsi_config.xml
+system/etc/data/netmgr_config.xml
+system/etc/data/qmi_config.xml
+system/etc/permissions/qcnvitems.xml
+system/etc/permissions/qcrilhook.xml
+system/etc/permissions/telephonyservice.xml
+system/framework/qcnvitems.jar|1ddb327e1a0afa103024f123ac618e6b89f9044d
+system/framework/qcrilhook.jar|77cb99dce9917a8b80f1f89cd6feac344bff8909
+system/framework/QtiTelephonyServicelibrary.jar|7c1dd966c584e4f76cb9b7e14755d1f820bd3a90
+system/lib64/libparam.so
+-system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|55eab7bdd59841e3622133eb736b536222231e82
 vendor/bin/qti
 vendor/lib64/com.quicinc.cne.api@1.0.so|0fcd53ca62a7e0f25b7bb1bac19ff9d039bac89c
 vendor/lib64/com.quicinc.cne.constants@1.0.so|a60fde6f9328635bf43bb7008dd9517e4e749e8b
@@ -412,17 +406,18 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libril-qc-qmi-1.so|e5e9e90462dd81edfc55b931bed4c8c859a8644a
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
-vendor/lib64/libsettings.so|3e459839d90a27d2eb23a3c9d030f46a5c4bfaf1
+vendor/lib64/libsettings.so|91047a98be1ab2b7552744509ffa96faa1f7df5c
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxml.so
+-vendor/lib/libmdmdetect.so
 vendor/qcril.db
 
 # Radio - IMS - MIUI Hydrogen 7.7.6 global dev
-bin/imsdatadaemon:vendor/bin/imsdatadaemon|2aa4067b74fe525411984f87666d81c5b6b575d3
-bin/imsqmidaemon:vendor/bin/imsqmidaemon|88886668eda7b7303b4a7aefd5b8b3fbffd81b02
-etc/permissions/imscm.xml|8b99ec26c783966bbea1fcb8e72c7c0206a4e802
-framework/imscmlibrary.jar|0c24d6540c06efede52169c1445272f43748180f
-framework/rcsimssettings.jar|566a0f637344ca3182aca33753e404977fc77ecc
+system/bin/imsdatadaemon:vendor/bin/imsdatadaemon|2aa4067b74fe525411984f87666d81c5b6b575d3
+system/bin/imsqmidaemon:vendor/bin/imsqmidaemon|88886668eda7b7303b4a7aefd5b8b3fbffd81b02
+system/etc/permissions/imscm.xml|8b99ec26c783966bbea1fcb8e72c7c0206a4e802
+system/framework/imscmlibrary.jar|0c24d6540c06efede52169c1445272f43748180f
+system/framework/rcsimssettings.jar|566a0f637344ca3182aca33753e404977fc77ecc
 -vendor/app/imssettings/imssettings.apk|cd206ecfdf8b9c738823104e13672707cb48ffd1
 vendor/lib64/lib-dplmedia.so|45de23a1bf2c758e71556b88fa01e1f705775b96
 vendor/lib64/lib-ims-rcscmjni.so|57a7cffdf589247b7fa38082418076e491b306ca
@@ -435,7 +430,7 @@ vendor/lib64/lib-imsrcscm.so|f783e1ea0dfa84392e92bd00d79b6be9fe4fdc1a
 vendor/lib64/lib-imsrcscmclient.so|5a24f31ed2bd8ebcca68583b2750c3fe9fc8a0b0
 vendor/lib64/lib-imsrcscmservice.so|3cbb7c5437eaea86fab6db8cddce05c3a0b15852
 vendor/lib64/lib-imss.so|f3bc1038d5720da58d1d1eb8e1ed6cec4ad93db4
-vendor/lib64/lib-imsvt.so|775a651af7d2c85505b2046de50f431d8b4c591e
+vendor/lib64/lib-imsvt.so|775a651af7d2c85505b2046de50f431d8b4c591e;DISABLE_CHECKELF
 vendor/lib64/lib-imsxml.so|babc9429f0291038b6161b212935e03363d5d921
 vendor/lib64/lib-rcsimssjni.so|80faffa65b5060c208fd4bc0085eebf7615fbb3a
 vendor/lib64/lib-rtpcommon.so|16d49c1c1475a4fe9b3d2f7632bc4f199a87c4ce
@@ -451,22 +446,22 @@ vendor/lib64/libimscamera_jni.so;SYMLINK=vendor/app/ims/lib/arm64/libimscamera_j
 vendor/lib64/libimsmedia_jni.so;SYMLINK=vendor/app/ims/lib/arm64/libimsmedia_jni.so|98e2ee0147b110ca487863f9e42627cadadabb90
 
 # Sensors - OxygenOS 3.6.0
-bin/sensors.qcom:vendor/bin/sensors.qcom
-etc/sensors/hals.conf:vendor/etc/sensors/hals.conf
-etc/sensors/sensor_def_qcomdev.conf
+system/bin/sensors.qcom:vendor/bin/sensors.qcom
+system/etc/sensors/hals.conf:vendor/etc/sensors/hals.conf
+system/etc/sensors/sensor_def_qcomdev.conf
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libsensor_thresh.so
 vendor/lib/libsensor_user_cal.so
-vendor/lib/sensors.ssc.so
+vendor/lib/sensors.ssc.so;DISABLE_CHECKELF
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor_thresh.so
 vendor/lib64/libsensor_user_cal.so
-vendor/lib64/sensors.ssc.so
+vendor/lib64/sensors.ssc.so;DISABLE_CHECKELF
 
 # Thermal - OxygenOS 3.6.0
-etc/thermal-engine.conf
+system/etc/thermal-engine.conf
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
@@ -474,15 +469,14 @@ vendor/lib64/libthermalioctl.so
 
 # Time services - OxygenOS 3.6.0
 vendor/lib64/libtime_genoff.so
+vendor/lib/libtime_genoff.so
 
 # TP Firmware - OxygenOS 3.6.0
-etc/firmware/tp/14049/14049_FW_S1302.img
-etc/firmware/tp/14049/14049_FW_S3320_jdi.img
+system/etc/firmware/tp/14049/14049_FW_S1302.img
+system/etc/firmware/tp/14049/14049_FW_S3320_jdi.img
 
 # Widevine - kanged from Angler OPM3.171019.019
 vendor/lib/mediadrm/libwvdrmengine.so|1a8ed1cc38bd33e6a41d1cdd6cd684226e0a3f32
 
 # Wifi
-bin/cnss-daemon:vendor/bin/cnss-daemon
--lib64/libwpa_qmi_eap_proxy.so
-vendor/lib64/libwifi-hal-prebuilt.so|26bac04c3a86d061be751f65b664669ccdef89cd
+system/bin/cnss-daemon:vendor/bin/cnss-daemon
