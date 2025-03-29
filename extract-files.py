@@ -64,7 +64,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libcrypto_keystore.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/lib-imsvt.so': blob_fixup()
-        .add_needed('libshims_ims.so'),
+        .add_needed('libshims_ims.so')
+        .add_needed('lib-imsvtshim.so'),
     'vendor/lib64/libmm-abl.so': blob_fixup()
         .add_needed('libshims_postproc.so'),
     'vendor/lib64/libril-qc-qmi-1.so': blob_fixup()

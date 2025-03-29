@@ -1,3 +1,4 @@
 binder_call(radio, gpuservice)
 
 allow radio rild:unix_stream_socket { connectto };
+allow radio imsvt_shim_file:file { read open execute getattr };

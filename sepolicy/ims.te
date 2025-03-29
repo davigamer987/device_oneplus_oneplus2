@@ -1,3 +1,4 @@
 allow ims system_prop:property_service set;
+allow ims imsvt_shim_file:file { read open execute };
 
 get_prop(ims, default_prop)
