@@ -329,7 +329,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    libaudioclient_shim \
+    libaudioclient_shim.msm8994 \
     librmnetctl \
     libxml2 \
     rild_socket

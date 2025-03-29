@@ -1,0 +1,48 @@
+cc_library_shared {
+    name: "rild_socket",
+    srcs: ["rild_socket.c"],
+    proprietary: true,
+}
+
+cc_library_shared {
+    name: "libshim_atomic",
+    header_libs: ["libcutils_headers"],
+    srcs: ["atomic.cpp"],
+    proprietary: true,
+}
+
+cc_library_shared {
+    name: "libaudioclient_shim.msm8994",
+    shared_libs: ["libaudioclient", "libutils", "liblog"],
+    header_libs: ["libmedia_headers"],
+    srcs: ["libaudioclient_shim.cpp"],
+}
+
+cc_library_shared {
+    name: "libshims_ims",
+    shared_libs: ["libstagefright_foundation", "libui", "libgui", "libmedia"],
+    srcs: ["libshim_mediabuffer.cpp"],
+    include_dirs: [
+        "frameworks/av/media/libstagefright/include",
+        "frameworks/av/include",
+    ],
+    proprietary: true,
+}
+
+cc_library_shared {
+    name: "libshims_postproc",
+    srcs: ["libshims_postproc.cpp"],
+    proprietary: true,
+}
+
+cc_library_shared {
+    name: "libshims_thermal",
+    srcs: ["libshims_thermal.cpp"],
+    proprietary: true,
+}
+
+cc_library_shared {
+    name: "lib-imsvtshim",
+    srcs: ["lib-imsvtshim.cpp"],
+    proprietary: true,
+}
