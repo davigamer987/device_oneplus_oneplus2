@@ -16,11 +16,14 @@
 
 #include <ui/GraphicBuffer.h>
 #include <media/stagefright/MediaBuffer.h>
+#include <media/MediaExtractorPluginApi.h>
 
 extern "C" {
 
 int _ZNK7android11MediaBuffer8refcountEv(android::MediaBuffer *thisptr) {
     return thisptr->refcount();
 }
+
+void _ZNK7android11MediaBuffer13graphicBufferEv() {}
 
 }
