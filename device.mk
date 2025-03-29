@@ -116,7 +116,8 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth@1.0-service \
     audio.bluetooth.default
 
 # Wifi
@@ -125,10 +126,8 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.audio@2.1-impl \
     vendor.qti.hardware.bluetooth_audio@2.0 \
     vendor.qti.hardware.btconfigstore@1.0 \
     libbt-vendor
