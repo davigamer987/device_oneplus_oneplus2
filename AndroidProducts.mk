@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_oneplus2.mk
+    $(LOCAL_DIR)/voltage_oneplus2.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_oneplus2-user \
-    lineage_oneplus2-userdebug \
-    lineage_oneplus2-eng
+    voltage_oneplus2-user \
+    voltage_oneplus2-userdebug \
+    voltage_oneplus2-eng
