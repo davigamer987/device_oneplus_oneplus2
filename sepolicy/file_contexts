@@ -145,6 +145,9 @@
 /sys/devices/soc\.0/[a-z0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)?    u:object_r:sysfs_leds:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.oneplus2    u:object_r:hal_light_default_exec:s0
 
+# Radio
+/(vendor|system/vendor)/bin/hw/android\.hardware\.radio@1\.4-service.msm8994    u:object_r:hal_radio_default_exec:s0
+
 # Net
 /sys/devices/virtual/net/rmnet_data[0-7]+/mtu                           u:object_r:sysfs_net:s0
 
