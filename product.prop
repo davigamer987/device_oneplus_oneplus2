@@ -1,0 +1,2 @@
+# Spoof kernel version for NetBpfLoad on kernel 3.10
+ro.bpf.kver_override=5.4.300
