@@ -45,3 +45,9 @@ cc_library_shared {
     srcs: ["lib-imsvtshim.cpp"],
     proprietary: true,
 }
+
+cc_library_shared {
+    name: "libshim_android",
+    srcs: ["android.cpp"],
+    proprietary: true,
+}
