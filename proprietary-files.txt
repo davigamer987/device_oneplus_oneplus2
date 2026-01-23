@@ -211,18 +211,18 @@ system/etc/firmware/fingerprints.b01
 system/etc/firmware/fingerprints.b02
 system/etc/firmware/fingerprints.b03
 system/etc/firmware/fingerprints.mdt
-system/lib/hw/fingerprint.msm8994.so
-system/lib/lib_fpc_tac_shared.so
-system/lib64/hw/fingerprint.msm8994.so
-system/lib64/lib_fpc_tac_shared.so
+system/lib/hw/fingerprint.msm8994.so:vendor/lib/hw/fingerprint.msm8994.so
+system/lib/lib_fpc_tac_shared.so:vendor/lib/lib_fpc_tac_shared.so
+system/lib64/hw/fingerprint.msm8994.so:vendor/lib64/hw/fingerprint.msm8994.so
+system/lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so
 
 # Gatekeeper - OxygenOS 3.6.0
 vendor/lib/hw/gatekeeper.msm8994.so
 vendor/lib64/hw/gatekeeper.msm8994.so
 
 # GPS
--system/lib64/libloc_api_v02.so
--system/lib64/libloc_ds_api.so
+-system/lib64/libloc_api_v02.so:vendor/lib64/libloc_api_v02.so
+-system/lib64/libloc_ds_api.so:vendor/lib64/libloc_ds_api.so
 vendor/lib64/hw/flp.default.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libflp.so
