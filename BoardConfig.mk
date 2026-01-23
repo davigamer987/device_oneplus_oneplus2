@@ -131,17 +131,17 @@ DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_oneplus2
-
 # IPA
 USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 
 # Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
+
+# Media
+TARGET_SUPPORTS_OMX_SERVICE := false
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
