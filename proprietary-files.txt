@@ -75,7 +75,7 @@ vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_debug.so
 vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_algorithm.so|ba1c77c31392adb8415d146cceb537dcf12d2f84
+vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
