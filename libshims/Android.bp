@@ -13,8 +13,7 @@ cc_library_shared {
 
 cc_library_shared {
     name: "libaudioclient_shim.msm8994",
-    shared_libs: ["libaudioclient", "libutils", "liblog"],
-    header_libs: ["libmedia_headers"],
+    vendor: true,
     srcs: ["libaudioclient_shim.cpp"],
 }
 
