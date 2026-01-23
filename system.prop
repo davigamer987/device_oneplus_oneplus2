@@ -66,10 +66,11 @@ qcom.hw.aac.encoder=true
 ro.charger.disable_init_blank=true
 
 # Dalvik heap
-dalvik.vm.heapstartsize=16m
+dalvik.vm.heapstartsize=24m
 dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heapminfree=2m
-dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=1m
+dalvik.vm.heapmaxfree=12m
+dalvik.vm.heapsize=512m
 
 # Data modules
 ro.use_data_netmgrd=true
