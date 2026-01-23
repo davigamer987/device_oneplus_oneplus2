@@ -348,6 +348,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     rild_socket
 
+# RIL dependency
+PRODUCT_PACKAGES += \
+    libsqlite.vendor
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
