@@ -22,7 +22,13 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/oneplus2 \
-    hardware/oneplus
+    hardware/oneplus \
+    device/oneplus/oneplus2/camera 
+
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/msm8994/display \
+    hardware/qcom-caf/msm8994/media \
+    hardware/qcom-caf/msm8994/audio
 
 # Permissions
 PRODUCT_COPY_FILES += \
