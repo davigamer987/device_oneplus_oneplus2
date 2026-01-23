@@ -59,18 +59,21 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libutils-v33.so'),
     'vendor/lib64/com.quicinc.cne.api@1.0.so': blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
-    'vendor/lib/libmmcamera2_stats_algorithm.so': blob_fixup()
+    ('vendor/lib/libmmcamera2_stats_algorithm.so', 'vendor/lib64/libmmcamera2_stats_algorithm.so'): blob_fixup()
         .add_needed('libshim_atomic.so'),
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/libcrypto_keystore.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/lib-imsvt.so': blob_fixup()
         .add_needed('libshims_ims.so')
         .add_needed('lib-imsvtshim.so'),
     'vendor/lib64/libmm-abl.so': blob_fixup()
-        .add_needed('libshims_postproc.so'),
+        .add_needed('libshims_postproc.so')
+        .remove_needed('libpowermanager.so'),
     'vendor/lib64/libril-qc-qmi-1.so': blob_fixup()
         .add_needed('libaudioclient_shim.msm8994.so')
-        .add_needed('rild_socket.so'),
+        .add_needed('rild_socket.so')
+        .remove_needed('libmedia.so'),
     'vendor/lib64/libimsmedia_jni.so': blob_fixup()
         .add_needed('lib-imsvtshim.so'),
     (
@@ -85,10 +88,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib/libmmcamera2_q3a_core.so',
         'vendor/lib/libmmcamera_cac2_lib.so',
         'vendor/lib/libmmcamera_pdaf.so',
-        'vendor/lib/libmmcamera2_stats_algorithm.so',
         'vendor/lib/libmmcamera_pdafcamif.so',
         'vendor/lib64/libmmcamera2_q3a_core.so',
-        'vendor/lib64/libmmcamera2_stats_algorithm.so',
         'vendor/lib64/libcrypto_keystore.so',
         'lib64/libopcamera.so',
         'lib64/libopcameralib.so',
@@ -99,11 +100,15 @@ blob_fixups: blob_fixups_user_type = {
     (
         'vendor/lib64/liblocationservice.so',
         'vendor/lib64/liblbs_core.so',
-        'system/lib64/libloc_api_v02.so',
+        'vendor/lib64/libloc_api_v02.so',
     ): blob_fixup()
         .binary_regex_replace(b'GnssSvStatus', b'QcomSvStatus'),
 
-} # fmt: skip
+    'vendor/lib/libmmcamera2_stats_modules.so': blob_fixup()
+        .replace_needed('libandroid.so', 'libsensorndkbridge.so')
+        .binary_regex_replace(b'system/lib/hw/sensors.hal.tof.so', b'vendor/lib/hw/sensors.hal.tof.so'),
+
+}
 
 module = ExtractUtilsModule(
     'oneplus2',
