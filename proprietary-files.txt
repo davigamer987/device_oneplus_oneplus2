@@ -271,7 +271,7 @@ system/etc/firmware/a420_pm4.fw
 
 # Keystore - OxygenOS 3.6.0
 vendor/lib64/hw/keystore.msm8994.so|567487839c061bc76f020ddb7b3e4abe5b2bd93b
-vendor/lib64/libcrypto_keystore.so|7b407570b7a19fe29d42c7a9669355bf91d630ef
+vendor/lib64/libcrypto_keystore.so|bdf1fb929ccbb21138422700a66107ebc39f0ccc
 
 # Media - OxygenOS 3.6.0
 vendor/lib/libDivxDrm.so
@@ -326,7 +326,7 @@ vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libmm-abl-oem.so
--vendor/lib64/libmm-abl.so|92d9faae9a021842bc58eb7e87e96bfe56d9d1e8
+-vendor/lib64/libmm-abl.so|39b0bfb6c97d1e833add5c59718489a379c16070
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-als.so
 vendor/lib64/libmm-qdcm.so
@@ -374,7 +374,7 @@ vendor/lib64/libsmemlog.so
 system/bin/netmgrd:vendor/bin/netmgrd|6ca8f2e16d3078848808787c9a81cfc78dc27c58
 system/bin/qmuxd:vendor/bin/qmuxd
 system/bin/rfs_access:vendor/bin/rfs_access
-vendor/bin/rmt_storage|59105701d95dec01f9028f86211630b3c45505fb
+vendor/bin/rmt_storage|4cd57922075ada02799c4ee5fdc2f3eb881d6e52
 system/etc/data/dsi_config.xml
 system/etc/data/netmgr_config.xml
 system/etc/data/qmi_config.xml
@@ -387,7 +387,7 @@ system/framework/QtiTelephonyServicelibrary.jar|7c1dd966c584e4f76cb9b7e14755d1f8
 system/lib64/libparam.so
 -system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|55eab7bdd59841e3622133eb736b536222231e82
 vendor/bin/qti
-vendor/lib64/com.quicinc.cne.api@1.0.so|0fcd53ca62a7e0f25b7bb1bac19ff9d039bac89c
+vendor/lib64/com.quicinc.cne.api@1.0.so|58982abfd202f201518d821b2e835e03726f345e
 vendor/lib64/com.quicinc.cne.constants@1.0.so|a60fde6f9328635bf43bb7008dd9517e4e749e8b
 vendor/lib64/libcneapiclient.so|33e7465996749a8823ac03e34a94e3112c88dda4
 vendor/lib64/libconfigdb.so
@@ -395,7 +395,7 @@ vendor/lib64/liblqe.so
 -vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so|0cae643d1d947c8f61bfab8ddd2b645645d31431
 vendor/lib64/libqcmaputils.so
-vendor/lib64/libril-qc-qmi-1.so|e5e9e90462dd81edfc55b931bed4c8c859a8644a
+vendor/lib64/libril-qc-qmi-1.so|461f1d6d81d39173340b76eb2ea02c6d6327fbdc
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libsettings.so|91047a98be1ab2b7552744509ffa96faa1f7df5c
@@ -422,7 +422,7 @@ vendor/lib64/lib-imsrcscm.so|f783e1ea0dfa84392e92bd00d79b6be9fe4fdc1a
 vendor/lib64/lib-imsrcscmclient.so|5a24f31ed2bd8ebcca68583b2750c3fe9fc8a0b0
 vendor/lib64/lib-imsrcscmservice.so|3cbb7c5437eaea86fab6db8cddce05c3a0b15852
 vendor/lib64/lib-imss.so|f3bc1038d5720da58d1d1eb8e1ed6cec4ad93db4
-vendor/lib64/lib-imsvt.so|775a651af7d2c85505b2046de50f431d8b4c591e;DISABLE_CHECKELF
+vendor/lib64/lib-imsvt.so|f68db4533c48abd65fb643cb392dbea420d0a821;DISABLE_CHECKELF
 vendor/lib64/lib-imsxml.so|babc9429f0291038b6161b212935e03363d5d921
 vendor/lib64/lib-rcsimssjni.so|80faffa65b5060c208fd4bc0085eebf7615fbb3a
 vendor/lib64/lib-rtpcommon.so|16d49c1c1475a4fe9b3d2f7632bc4f199a87c4ce
