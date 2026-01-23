@@ -384,7 +384,7 @@ system/etc/permissions/telephonyservice.xml
 system/framework/qcnvitems.jar|1ddb327e1a0afa103024f123ac618e6b89f9044d
 system/framework/qcrilhook.jar|77cb99dce9917a8b80f1f89cd6feac344bff8909
 system/framework/QtiTelephonyServicelibrary.jar|7c1dd966c584e4f76cb9b7e14755d1f820bd3a90
-system/lib64/libparam.so
+system/lib64/libparam.so:vendor/lib64/libparam.so
 -system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|55eab7bdd59841e3622133eb736b536222231e82
 vendor/bin/qti
 vendor/lib64/com.quicinc.cne.api@1.0.so|58982abfd202f201518d821b2e835e03726f345e
