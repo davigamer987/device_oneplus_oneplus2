@@ -233,6 +233,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Init
+PRODUCT_PACKAGES += \
+    libinit_oneplus2
+
 # IRQ Balance
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
@@ -255,6 +259,9 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus2
+
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,libinit_oneplus2)
 
 # Lineage Health
 PRODUCT_PACKAGES += \
