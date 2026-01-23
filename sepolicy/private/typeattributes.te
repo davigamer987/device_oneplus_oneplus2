@@ -1,0 +1,9 @@
+# System partition file types
+typeattribute dpmd_exec system_file_type;
+typeattribute dun-server_exec system_file_type;
+typeattribute mmi_sys_exec system_file_type;
+typeattribute qti-testscripts_exec system_file_type;
+typeattribute qvrd_exec system_file_type;
+typeattribute seempd_exec system_file_type;
+typeattribute smcinvoke_daemon_exec system_file_type;
+typeattribute wfdservice_exec system_file_type;
