@@ -1,2 +1,5 @@
 # Spoof kernel version for NetBpfLoad on kernel 3.10
 ro.bpf.kver_override=5.4.300
+
+# MD3e
+is_expressive_design_enabled=true
