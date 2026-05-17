@@ -1,2 +1,5 @@
 # BPF - spoof kernel version for NetBpfLoad on 3.18 kernel
 ro.bpf.kver_override=5.4.300
+
+# MD3e
+is_expressive_design_enabled=true
