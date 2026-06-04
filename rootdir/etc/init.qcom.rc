@@ -347,6 +347,9 @@ on post-fs-data
 on property:sys.boot_completed=1
     setprop vendor.post_boot.parsed 1
     swapon_all /vendor/etc/fstab.qcom
+
+    # Disable power-efficient workqueue scheduling (kernel default is on via CONFIG_WQ_POWER_EFFICIENT_DEFAULT)
+    write /sys/module/workqueue/parameters/power_efficient 0
     start perfd
     start tfa-sh
     restart cameraserver
