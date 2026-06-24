@@ -4,3 +4,4 @@ get_prop(zygote, bluetooth_prop)
 get_prop(zygote, exported_camera_prop)
 
 allow zygote proc_cmdline:file { read open getattr };
+allow zygote vendor_file:file { open getattr read write execute };

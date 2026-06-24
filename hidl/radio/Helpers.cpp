@@ -17,6 +17,14 @@ V1_4::SignalStrength Create1_4SignalStrength(const V1_0::SignalStrength& sigStre
     newSigStrength.evdo = sigStrength.evdo;
     newSigStrength.lte = sigStrength.lte;
 
+    if (newSigStrength.lte.signalStrength == 99 && newSigStrength.gsm.signalStrength != 99) {
+        newSigStrength.lte.signalStrength = INT_MAX;
+        newSigStrength.lte.rsrq = INT_MAX;
+        newSigStrength.lte.rssnr = INT_MAX;
+        newSigStrength.lte.cqi = INT_MAX;
+        newSigStrength.lte.timingAdvance = INT_MAX;
+    }
+
     newSigStrength.tdscdma.signalStrength = INT_MAX;
     newSigStrength.tdscdma.bitErrorRate = INT_MAX;
     newSigStrength.tdscdma.rscp = sigStrength.tdScdma.rscp != INT_MAX ?

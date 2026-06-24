@@ -1,4 +1,5 @@
 allow hal_graphics_composer_default mpctl_socket:dir search;
+allow hal_graphics_composer_default hal_graphics_allocator_service:service_manager { add find };
 allow hal_graphics_composer_default sysfs_graphics:lnk_file read;
 
 get_prop(hal_graphics_composer_default, bootanim_system_prop)
