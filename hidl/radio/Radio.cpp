@@ -7,12 +7,15 @@
 #define LOG_TAG "android.hardware.radio@1.4-service.legacy"
 
 #include "Radio.h"
-#include "RadioIndication.h"
 #include "Helpers.h"
+#include "RadioIndication.h"
 #include <vector>
 #include <string>
 
 #include <android-base/logging.h>
+
+sp<RadioIndication> xxRadioIndication = new RadioIndication();
+int32_t emergency_dial_serial = -1;
 
 #define WRAP_V1_0_CALL(method, ...)                                            \
     do {                                                                       \
@@ -57,8 +60,6 @@
     } while (0)
 
 namespace android::hardware::radio::implementation {
-sp<RadioIndication> xxRadioIndication = new RadioIndication();
-int32_t emergency_dial_serial = -1;
 
 Radio::Radio(sp<V1_0::IRadio> realRadio) : mRealRadio(realRadio) {}
 
@@ -839,8 +840,6 @@ Return<void> Radio::startNetworkScan_1_4(int32_t serial, const V1_2::NetworkScan
     info.error = V1_0::RadioError::NONE;
     mRadioResponse->mRealRadioResponse->startNetworkScanResponse_1_4(info);
     WRAP_V1_0_CALL(getAvailableNetworks, serial);
-
-    return Void();
 }
 
 Return<void> Radio::getPreferredNetworkTypeBitmap(int32_t serial) {

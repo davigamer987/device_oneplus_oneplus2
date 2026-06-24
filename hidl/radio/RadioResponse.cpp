@@ -4,18 +4,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "Radio.h"
-#include "RadioIndication.h"
 #include "RadioResponse.h"
+#include "RadioIndication.h"
 #include "Helpers.h"
-#include<string>
+#include <string>
+#include <vector>
 
 extern int slotId;
-
-namespace android::hardware::radio::implementation {
-
 extern sp<RadioIndication> xxRadioIndication;
 extern int32_t emergency_dial_serial;
+
+namespace android::hardware::radio::implementation {
 
 // Methods from ::android::hardware::radio::V1_0::IRadioResponse follow.
 Return<void> RadioResponse::getIccCardStatusResponse(const V1_0::RadioResponseInfo& info,
@@ -84,7 +83,6 @@ Return<void> RadioResponse::dialResponse(const V1_0::RadioResponseInfo& info) {
         emergency_dial_serial = -1;
         return mRealRadioResponse->emergencyDialResponse(info);
     }
-
     return mRealRadioResponse->dialResponse(info);
 }
 
@@ -297,20 +295,19 @@ Return<void> RadioResponse::setNetworkSelectionModeManualResponse(
     return mRealRadioResponse->setNetworkSelectionModeManualResponse(info);
 }
 
-hidl_vec<V1_4::CellInfo> convertOperatorInfoToCellInfo1_4(const hidl_vec<V1_0::OperatorInfo>& networkInfos) {
+static hidl_vec<V1_4::CellInfo> convertOperatorInfoToCellInfo1_4(
+        const hidl_vec<V1_0::OperatorInfo>& networkInfos) {
     std::vector<V1_4::CellInfo> cellInfos;
 
     for (const auto& op : networkInfos) {
         V1_4::CellInfo cell = {};
-
         cell.isRegistered = (op.status == V1_0::OperatorStatus::CURRENT);
         cell.connectionStatus = cell.isRegistered ?
-                                V1_2::CellConnectionStatus::PRIMARY_SERVING :
-                                V1_2::CellConnectionStatus::NONE;
+                V1_2::CellConnectionStatus::PRIMARY_SERVING :
+                V1_2::CellConnectionStatus::NONE;
 
         std::string numeric = op.operatorNumeric;
-        std::string mcc = "";
-        std::string mnc = "";
+        std::string mcc, mnc;
         if (numeric.length() >= 5) {
             mcc = numeric.substr(0, 3);
             mnc = numeric.substr(3);
@@ -323,13 +320,11 @@ hidl_vec<V1_4::CellInfo> convertOperatorInfoToCellInfo1_4(const hidl_vec<V1_0::O
         lteId.base.pci = INT_MAX;
         lteId.base.tac = INT_MAX;
         lteId.base.earfcn = INT_MAX;
-
         lteId.operatorNames.alphaLong = op.alphaLong;
         lteId.operatorNames.alphaShort = op.alphaShort;
 
         V1_4::CellInfo::Info info;
         info.lte(V1_4::CellInfoLte{{lteId, {}}});
-
         cell.info = info;
 
         cellInfos.push_back(cell);
@@ -346,7 +341,6 @@ Return<void> RadioResponse::getAvailableNetworksResponse(
     scanResult.networkInfos = convertOperatorInfoToCellInfo1_4(networkInfos);
     xxRadioIndication->mRealRadioIndication->networkScanResult_1_4(
             V1_0::RadioIndicationType::UNSOLICITED, scanResult);
-
     return Void();
 }
 
