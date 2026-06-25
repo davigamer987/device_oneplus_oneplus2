@@ -68,8 +68,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 # Control groups and task profiles
 PRODUCT_COPY_FILES += \
-    system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
-    system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+    system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
