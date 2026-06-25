@@ -175,6 +175,10 @@ ro.qc.sdk.sensors.gestures=true
 ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
 
+# Silence BLASTBufferQueue ENOSYS
+persist.log.tag.SurfaceControl=S
+persist.log.tag.BLASTBufferQueue=S
+
 # SoC
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8994
