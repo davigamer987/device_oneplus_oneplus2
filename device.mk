@@ -267,7 +267,7 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # LiveDisplay
-# PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-legacymm \
     vendor.lineage.livedisplay@2.0-service-sysfs
 
@@ -385,6 +385,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.oneplus2
 
 # Tri-state-key
 PRODUCT_PACKAGES += \
