@@ -7,6 +7,7 @@
 #include "RadioResponse.h"
 #include "RadioIndication.h"
 #include "Helpers.h"
+#include <cutils/properties.h>
 #include <string>
 #include <vector>
 
@@ -30,6 +31,12 @@ Return<void> RadioResponse::getIccCardStatusResponse(const V1_0::RadioResponseIn
         newCS.base.iccid = hidl_string("00000000000000000000");
     else
        newCS.base.iccid = hidl_string("11111111111111111111");
+
+    char prop[PROPERTY_KEY_MAX];
+    snprintf(prop, sizeof(prop), "vendor.radio.cardstate.slot%d", slotId);
+    property_set(prop, std::to_string((int)newCS.base.base.cardState).c_str());
+    snprintf(prop, sizeof(prop), "vendor.radio.iccid.slot%d", slotId);
+    property_set(prop, std::string(newCS.base.iccid).c_str());
 
     return mRealRadioResponse->getIccCardStatusResponse_1_4(info, newCS);
 }

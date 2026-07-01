@@ -20,6 +20,7 @@ cc_binary {
     ],
     shared_libs: [
         "libbase",
+        "libcutils",
         "libhidlbase",
         "libutils",
         "android.hardware.radio@1.0",
