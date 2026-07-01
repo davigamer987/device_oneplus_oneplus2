@@ -271,7 +271,7 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-legacymm \
     vendor.lineage.livedisplay@2.0-service-sysfs
 
@@ -389,7 +389,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus2
+    vendor.lineage.touch-service.oneplus2
 
 # Tri-state-key
 PRODUCT_PACKAGES += \
@@ -440,3 +440,7 @@ PRODUCT_PACKAGES += \
 ## For details of the root cause and the cts vts tests comparison between
 ## the preloading and non-preloading builds, please check the above issue.
 PRODUCT_PROPERTY_OVERRIDES += ro.zygote.disable_gl_preload=1
+
+# Reduces notification flicker, no UI performance impact
+# (per: https://android.googlesource.com/platform/frameworks/native/+/c5da271)
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.latch_unsignaled=0
