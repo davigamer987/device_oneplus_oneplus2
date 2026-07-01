@@ -291,7 +291,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4-service.msm8994 \
     android.hardware.radio.config@1.1-service.msm8994
 
-TARGET_PRODUCT_PROP += $(LOCAL_PATH)/product.prop
+TARGET_PRODUCT_PROP += device/oneplus/oneplus2/product.prop
 
 # OMX
 PRODUCT_PACKAGES += \
