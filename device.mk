@@ -217,6 +217,7 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     lib-imsvtshim \
+    libstagefright_vendor_shim \
     libshims_ims
 
 PRODUCT_COPY_FILES += \
