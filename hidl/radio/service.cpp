@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
     // Note: Starts from slot 1
     std::map<int, sp<V1_4::IRadio>> slotIdToRadio;
 
-    for (int i = 1; i < argc ;) {
+    for (int i = 1; i < argc; ++i) {
         if (0 == strcmp(argv[i], "-s")) {
             slotId = 2;
             break;
