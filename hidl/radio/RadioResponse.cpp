@@ -24,7 +24,7 @@ Return<void> RadioResponse::getIccCardStatusResponse(const V1_0::RadioResponseIn
                                                      const V1_0::CardStatus& cardStatus) {
     V1_4::CardStatus newCS = {};
     newCS.base.base = cardStatus;
-    newCS.base.physicalSlotId = -1;
+    newCS.base.physicalSlotId = slotId - 1;
 
     if (slotId == 1)
         newCS.base.iccid = hidl_string("00000000000000000000");
