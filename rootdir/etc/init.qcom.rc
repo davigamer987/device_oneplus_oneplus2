@@ -139,6 +139,10 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
 
 on boot
+    # cpu-boost: short frequency boost on touch input, per cluster
+    write /sys/module/cpu_boost/parameters/input_boost_ms 40
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1555200 1:1555200 2:1555200 3:1555200 4:1766400 5:1766400 6:1766400 7:1766400"
+
     # add a cpuset for the camera daemon
     # we want all the little cores for camera
     mkdir /dev/cpuset/camera-daemon
