@@ -5,6 +5,8 @@
  */
 
 #include "RadioConfig.h"
+#include <android/hardware/radio/1.0/types.h>
+#include <cutils/properties.h>
 
 namespace android {
 namespace hardware {
@@ -22,8 +24,29 @@ Return<void> RadioConfig::setResponseFunctions(
 }
 
 Return<void> RadioConfig::getSimSlotsStatus(int32_t /* serial */) {
-    hidl_vec<V1_0::SimSlotStatus> slotStatus;
+    hidl_vec<V1_0::SimSlotStatus> slotStatus(2);
+    for (uint32_t i = 0; i < 2; ++i) {
+        char prop[PROPERTY_VALUE_MAX];
+        char key[PROPERTY_KEY_MAX];
+
+        snprintf(key, sizeof(key), "vendor.radio.cardstate.slot%d", i + 1);
+        property_get(key, prop, "0" /* ABSENT */);
+        int cardState = atoi(prop);
+
+        slotStatus[i].cardState = static_cast<::android::hardware::radio::V1_0::CardState>(cardState);
+        slotStatus[i].slotState = V1_0::SlotState::ACTIVE;
+        slotStatus[i].logicalSlotId = i;
+        slotStatus[i].atr = "";
+
+        if (slotStatus[i].cardState == ::android::hardware::radio::V1_0::CardState::PRESENT) {
+            snprintf(key, sizeof(key), "vendor.radio.iccid.slot%d", i + 1);
+            property_get(key, prop, "");
+            slotStatus[i].iccid = prop;
+        }
+    }
+
     ::android::hardware::radio::V1_0::RadioResponseInfo info;
+    info.error = ::android::hardware::radio::V1_0::RadioError::NONE;
     mRadioConfigResponse->getSimSlotsStatusResponse(info, slotStatus);
     return Void();
 }
