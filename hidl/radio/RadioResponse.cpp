@@ -10,6 +10,9 @@
 #include <string>
 #include <vector>
 
+using android::sp;
+using android::hardware::radio::implementation::RadioIndication;
+
 extern int slotId;
 extern sp<RadioIndication> xxRadioIndication;
 extern int32_t emergency_dial_serial;
