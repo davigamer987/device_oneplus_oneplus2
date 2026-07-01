@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
     slotIdToRadio[slotId] = new Radio(realRadio);
     linkDeathToDeath(realRadio);
 
-    configureRpcThreadpool(1, true);
+    configureRpcThreadpool(4, true);
 
     for (auto const& [slotId, radio] : slotIdToRadio) {
         status_t status = radio->registerAsService("slot" + std::to_string(slotId));
