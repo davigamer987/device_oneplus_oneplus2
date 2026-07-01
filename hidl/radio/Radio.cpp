@@ -14,7 +14,8 @@
 
 #include <android-base/logging.h>
 
-sp<RadioIndication> xxRadioIndication = new RadioIndication();
+android::sp<android::hardware::radio::implementation::RadioIndication> xxRadioIndication =
+        new android::hardware::radio::implementation::RadioIndication();
 int32_t emergency_dial_serial = -1;
 
 #define WRAP_V1_0_CALL(method, ...)                                            \
