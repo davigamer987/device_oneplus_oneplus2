@@ -23,7 +23,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/oneplus2 \
     hardware/oneplus \
-    device/oneplus/oneplus2/camera 
+    hardware/qcom-caf/bt/libbt-vendor \
+    hardware/sony/timekeep \
+    device/oneplus/oneplus2/camera
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/msm8994/display \
