@@ -2,6 +2,9 @@ persist.sys.diag.max.size           u:object_r:diag_prop:s0
 persist.vendor.timeadjust           u:object_r:vendor_timekeep_prop:s0
 
 # Radio / net
+persist.data.                       u:object_r:radio_prop:s0
+persist.data_netmgrd_mtu            u:object_r:radio_prop:s0
+persist.qcril.                      u:object_r:radio_prop:s0
 persist.rmnet.                      u:object_r:radio_prop:s0
 ro.use_data_netmgrd                 u:object_r:radio_prop:s0
 ro.usb.                             u:object_r:radio_prop:s0
