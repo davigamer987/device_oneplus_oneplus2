@@ -1,4 +1,0 @@
-allow mm-pp-daemon sysfs_graphics:lnk_file read;
-allow mm-pp-daemon ion_device:chr_file { read };
-
-get_prop(mm-pp-daemon, default_prop)
