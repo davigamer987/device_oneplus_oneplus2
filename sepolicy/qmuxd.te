@@ -1,2 +1,13 @@
-get_prop(qmuxd, default_prop) 
+get_prop(qmuxd, default_prop)
 get_prop(qmuxd, radio_prop)
+
+allow qmuxd qmuxd_socket:dir w_dir_perms;
+allow qmuxd qmuxd_socket:sock_file { create setattr getattr unlink };
+
+allow qmuxd radio_device:chr_file rw_file_perms;
+
+r_dir_file(qmuxd, sysfs)
+allow qmuxd sysfs_smd_open_timeout:file rw_file_perms;
+
+use_per_mgr(qmuxd)
+allow qmuxd ssr_device:chr_file r_file_perms;

@@ -1,3 +1,4 @@
 allow wcnss_service self:capability { setgid setuid };
 
 get_prop(wcnss_service, default_prop)
+get_prop(wcnss_service, radio_prop)

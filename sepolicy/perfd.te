@@ -1,3 +1,5 @@
 allow perfd proc_kernel_sched:file rw_file_perms;
 
+allow perfd self:capability dac_override;
+
 get_prop(perfd, default_prop)
