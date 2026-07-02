@@ -1,1 +1,2 @@
 get_prop(mediacodec, default_prop)
+get_prop(mediacodec, camera_prop)

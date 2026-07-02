@@ -130,6 +130,14 @@
 /(vendor|system/vendor)/lib64/libulp2.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libcrypto_keystore.so			u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/liblowi_client.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libbinder.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libui.so					u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/liblog_rust\.dylib\.so			u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/android\.hardware\.gnss@1\.0\.so		u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/android\.hardware\.sensors@1\.0\.so	u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/android\.hardware\.graphics\.allocator@2\.0\.so	u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/android\.hardware\.graphics\.allocator@3\.0\.so	u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/android\.hardware\.graphics\.allocator@4\.0\.so	u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/libbinder.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/libui.so					u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib/android\.hardware\.graphics\.allocator@2\.0\.so	u:object_r:same_process_hal_file:s0
@@ -152,6 +160,7 @@
 
 # Radio
 /(vendor|system/vendor)/bin/hw/android\.hardware\.radio@1\.4-service.msm8994    u:object_r:hal_radio_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.radio\.config@1\.1-service\.msm8994    u:object_r:hal_radio_default_exec:s0
 
 # Net
 /sys/devices/virtual/net/rmnet_data[0-7]+/mtu                           u:object_r:sysfs_net:s0
