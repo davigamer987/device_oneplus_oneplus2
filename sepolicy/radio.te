@@ -1,4 +1,11 @@
 binder_call(radio, gpuservice)
 
+type rild_qmuxd_socket, file_type;
+file_type_auto_trans(rild, qmuxd_socket, rild_qmuxd_socket)
+allow rild qmuxd_socket:dir remove_name;
+unix_socket_connect(rild, qmuxd, qmuxd)
+allow qmuxd rild_qmuxd_socket:sock_file { getattr unlink };
+
+allow radio rild_qmuxd_socket:sock_file rw_file_perms;
 allow radio rild:unix_stream_socket { connectto };
 allow radio imsvt_shim_file:file { read open execute getattr };

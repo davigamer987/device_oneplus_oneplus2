@@ -1,6 +1,14 @@
 # Root files
 /bt_firmware(/.*)?                                                      u:object_r:bt_firmware_file:s0
 
+/(vendor|system/vendor)/odm/etc/selinux/odm_sepolicy\.cil               u:object_r:sepolicy_file:s0
+/(vendor|system/vendor)/odm/etc/selinux/odm_file_contexts               u:object_r:file_contexts_file:s0
+/(vendor|system/vendor)/odm/etc/selinux/odm_seapp_contexts              u:object_r:seapp_contexts_file:s0
+/(vendor|system/vendor)/odm/etc/selinux/odm_property_contexts           u:object_r:property_contexts_file:s0
+/(vendor|system/vendor)/odm/etc/selinux/odm_service_contexts            u:object_r:vendor_service_contexts_file:s0
+/(vendor|system/vendor)/odm/etc/selinux/odm_hwservice_contexts          u:object_r:hwservice_contexts_file:s0
+/(vendor|system/vendor)/odm/etc/selinux/odm_mac_permissions\.xml        u:object_r:mac_perms_file:s0
+
 # We have a couple of non-standard NV partitions
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/oem_dycnvbk          u:object_r:modem_efs_partition_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/oem_stanvbk          u:object_r:modem_efs_partition_device:s0
@@ -130,6 +138,21 @@
 /(vendor|system/vendor)/lib64/libulp2.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libcrypto_keystore.so			u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/liblowi_client.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libloc_api_v02.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libloc_ds_api.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libhardware_legacy.so			u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/server_configurable_flags.so		u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libaconfig_storage_read_api_cc.so	u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/android\.system\.suspend-V1-ndk\.so	u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libbase.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libc\+\+.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libcrypto.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libcutils.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libhidlbase.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libprocessgroup.so			u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libutils.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libdiag.so				u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libpower.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libbinder.so				u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libui.so					u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/liblog_rust\.dylib\.so			u:object_r:same_process_hal_file:s0

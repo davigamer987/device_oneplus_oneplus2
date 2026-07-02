@@ -20,6 +20,15 @@ allow vendor_init radio_core_data_file:file create_file_perms;
 # for IPA data setup
 allow vendor_init ipacm_data_file:dir create_dir_perms;
 
+allow vendor_init {
+  data_qsee_file
+  camera_socket
+  vendor_display_vendor_data_file
+  mpctl_socket
+  mpctl_data_file
+}:dir create_dir_perms;
+allow vendor_init mpctl_data_file:file unlink;
+
 get_prop(vendor_init, qcom_ims_prop)
 get_prop(vendor_init, persist_debug_prop)
 get_prop(vendor_init, bluetooth_prop)
