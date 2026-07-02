@@ -6,6 +6,7 @@ cc_library_shared {
 
 cc_library_shared {
     name: "libshim_atomic",
+    compile_multilib: "32",
     header_libs: ["libcutils_headers"],
     srcs: ["atomic.cpp"],
     proprietary: true,
@@ -19,7 +20,12 @@ cc_library_shared {
 
 cc_library_shared {
     name: "libshims_ims",
-    shared_libs: ["libstagefright_foundation", "libui", "libgui", "libmedia"],
+    shared_libs: [
+        "libstagefright_foundation",
+        "libui",
+        "libgui",
+        "libmedia",
+    ],
     srcs: ["libshim_mediabuffer.cpp"],
     include_dirs: [
         "frameworks/av/media/libstagefright/include",
@@ -44,6 +50,18 @@ cc_library_shared {
     name: "lib-imsvtshim",
     srcs: ["lib-imsvtshim.cpp"],
     proprietary: true,
+}
+
+cc_library_shared {
+    name: "libstagefright_vendor_shim",
+    stem: "libstagefright",
+    compile_multilib: "64",
+    srcs: ["libstagefright_vendor_shim.cpp"],
+    shared_libs: [
+        "libmedia_omx",
+        "libstagefright_foundation",
+    ],
+    vendor: true,
 }
 
 cc_library_shared {
